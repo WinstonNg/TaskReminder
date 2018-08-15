@@ -8,6 +8,8 @@ import {
     Modal,
     Button,
 } from 'react-native';
+import { Icon } from 'react-native-elements'
+
 
 export class TaskItem extends React.Component {
     state = {
@@ -42,21 +44,52 @@ export class TaskItem extends React.Component {
                                 <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
                                     <View style={styles.button01}>
                                         <Text style={styles.buttonText}>Edit</Text>
+                                        <View style={styles.icons}>
+                                        <Icon
+                                            name='edit'
+                                            type='font-awesome'
+                                            size={50}
+                                         />
+                                        </View>
                                     </View>
                                 </TouchableHighlight>
                                 <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
                                     <View style={styles.button02}>
                                         <Text style={styles.buttonText}>Delete</Text>
+                                        <View style={styles.icons}>
+                                        <Icon
+                                            name='delete'
+                                            type='material-community'
+                                            size={50}
+                                         />
+                                        </View>
+                                        
                                     </View>
                                 </TouchableHighlight>
                                 <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
                                     <View style={styles.button03}>
                                         <Text style={styles.buttonText}>Pin</Text>
+                                        <View style={styles.icons}>
+                                        <Icon
+                                            name='pin'
+                                            type='entypo'
+                                            size={50}
+                                        />
+                                        </View>
+                                        
                                     </View>
                                 </TouchableHighlight>
                                 <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
                                     <View style={styles.button04}>
                                         <Text style={styles.buttonText}>Mark as Completed</Text>
+                                        <View style={styles.icons}>
+                                        <Icon
+                                            name='check'
+                                            type='feather'
+                                            size={50}
+                                        />
+                                        </View>
+                                        
                                     </View>
                                 </TouchableHighlight>
                             </View>
@@ -85,9 +118,7 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         shadowOpacity: 1.0,
         borderWidth: 1,
-        flexDirection: 'row',
         backgroundColor: '#fff',
-        justifyContent: 'space-between',
     },
     textStyling: {
         width: 360,
@@ -140,7 +171,10 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         textAlign: 'center',
         fontSize: 24,
-        color: 'white'
+        color: 'black'
+    },
+    icons: {
+        paddingLeft: 350
     }
 });
 
