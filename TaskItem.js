@@ -5,10 +5,17 @@ import {
     Text,
     View,
     TouchableHighlight,
-    Modal,
-    Button,
+    Modal
 } from 'react-native';
-import { Icon } from 'react-native-elements'
+import { Icon,Button } from 'react-native-elements'
+
+const buttonStyle = {
+    height : 100,
+    width : 300,
+    borderWidth : 0,
+    borderRadius : 10,
+    marginTop: 5
+}
 
 
 export class TaskItem extends React.Component {
@@ -41,57 +48,42 @@ export class TaskItem extends React.Component {
                         }}>
                         <View style={{ marginTop: 22 }}>
                             <View style={styles.buttonView}>
-                                <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
-                                    <View style={styles.button01}>
-                                        <Text style={styles.buttonText}>Edit</Text>
-                                        <View style={styles.icons}>
-                                        <Icon
-                                            name='edit'
-                                            type='font-awesome'
-                                            size={50}
-                                         />
-                                        </View>
-                                    </View>
-                                </TouchableHighlight>
-                                <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
-                                    <View style={styles.button02}>
-                                        <Text style={styles.buttonText}>Delete</Text>
-                                        <View style={styles.icons}>
-                                        <Icon
-                                            name='delete'
-                                            type='material-community'
-                                            size={50}
-                                         />
-                                        </View>
-                                        
-                                    </View>
-                                </TouchableHighlight>
-                                <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
-                                    <View style={styles.button03}>
-                                        <Text style={styles.buttonText}>Pin</Text>
-                                        <View style={styles.icons}>
-                                        <Icon
-                                            name='pin'
-                                            type='entypo'
-                                            size={50}
-                                        />
-                                        </View>
-                                        
-                                    </View>
-                                </TouchableHighlight>
-                                <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
-                                    <View style={styles.button04}>
-                                        <Text style={styles.buttonText}>Mark as Completed</Text>
-                                        <View style={styles.icons}>
-                                        <Icon
-                                            name='check'
-                                            type='feather'
-                                            size={50}
-                                        />
-                                        </View>
-                                        
-                                    </View>
-                                </TouchableHighlight>
+                                <Button style={styles.buttons}
+                                large
+                                icon={{name: 'edit', type:'font-awesome'}}
+                                title='EDIT'
+                                buttonStyle={{
+                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    ...buttonStyle
+                                  }} />
+
+                                <Button style={styles.buttons}
+                                large
+                                icon={{name: 'delete', type:'material-community'}}
+                                title='DELETE'
+                                buttonStyle={{
+                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    ...buttonStyle
+                                  }} />
+
+                                <Button style={styles.buttons}
+                                large
+                                icon={{name: 'pin', type:'entypo'}}
+                                title='PIN'
+                                buttonStyle={{
+                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    ...buttonStyle
+                                  }} />
+
+                                <Button style={styles.buttons}
+                                large
+                                icon={{name: 'check', type:'feather'}}
+                                title='MARK COMPLETE'
+                                buttonStyle={{
+                                    backgroundColor: "#20b2aa",
+                                    ...buttonStyle
+                                  }} />
+                            
                             </View>
                         </View>
                     </Modal>
@@ -129,52 +121,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     buttonView: {
-        paddingTop: 45,
-        paddingBottom: 45,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'center',
+        paddingTop: 150,
+        paddingBottom: 0,
+        paddingLeft: 50,
     },
-    button01: {
-        width: 6000,
-        height: 100,
-        margin: 20,
-        backgroundColor: '#d3d3d3',
-        borderRadius: 5,
-        bottom: 0
-    },
-    button02: {
-        width: 6000,
-        height: 100,
-        margin: 20,
-        backgroundColor: '#ff0000',
-        borderRadius: 5,
-        bottom: 0
-    },
-    button03: {
-        width: 6000,
-        height: 100,
-        margin: 20,
-        backgroundColor: '#2196F3',
-        borderRadius: 5,
-        bottom: 0
-    },
-    button04: {
-        width: 6000,
-        height: 100,
-        margin: 20,
-        backgroundColor: '#008000',
-        borderRadius: 5,
-        bottom: 0
-    },
-    buttonText: {
-        paddingTop: 30,
-        textAlign: 'center',
-        fontSize: 24,
-        color: 'black'
-    },
-    icons: {
-        paddingLeft: 350
-    }
 });
 
