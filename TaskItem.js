@@ -14,7 +14,7 @@ const buttonStyle = {
     width : 300,
     borderWidth : 0,
     borderRadius : 10,
-    marginTop: 5
+    marginTop: 20
 }
 
 
@@ -53,7 +53,7 @@ export class TaskItem extends React.Component {
                                 icon={{name: 'edit', type:'font-awesome'}}
                                 title='EDIT'
                                 buttonStyle={{
-                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    backgroundColor: "#daa520",
                                     ...buttonStyle
                                   }} />
 
@@ -62,7 +62,7 @@ export class TaskItem extends React.Component {
                                 icon={{name: 'delete', type:'material-community'}}
                                 title='DELETE'
                                 buttonStyle={{
-                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    backgroundColor: "#b22222",
                                     ...buttonStyle
                                   }} />
 
@@ -71,7 +71,7 @@ export class TaskItem extends React.Component {
                                 icon={{name: 'pin', type:'entypo'}}
                                 title='PIN'
                                 buttonStyle={{
-                                    backgroundColor: "rgba(92, 99,216, 1)",
+                                    backgroundColor: "#87ceeb",
                                     ...buttonStyle
                                   }} />
 
@@ -121,9 +121,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     buttonView: {
-        paddingTop: 150,
+        paddingTop: 80,
         paddingBottom: 0,
-        paddingLeft: 50,
+        paddingLeft: 45,
     },
 });
 
