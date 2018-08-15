@@ -55,7 +55,9 @@ export class TaskItem extends React.Component {
                                 buttonStyle={{
                                     backgroundColor: "#daa520",
                                     ...buttonStyle
-                                  }} />
+                                  }} 
+                                  onPress={this.props.handleEdit}
+                                  />
 
                                 <Button style={styles.buttons}
                                 large
@@ -64,7 +66,9 @@ export class TaskItem extends React.Component {
                                 buttonStyle={{
                                     backgroundColor: "#b22222",
                                     ...buttonStyle
-                                  }} />
+                                  }} 
+                                  onPress={this.props.handleDelete}
+                                  />
 
                                 <Button style={styles.buttons}
                                 large
@@ -73,7 +77,9 @@ export class TaskItem extends React.Component {
                                 buttonStyle={{
                                     backgroundColor: "#87ceeb",
                                     ...buttonStyle
-                                  }} />
+                                  }} 
+                                  onPress={this.props.handleTogglePin}
+                                  />
 
                                 <Button style={styles.buttons}
                                 large
@@ -82,7 +88,9 @@ export class TaskItem extends React.Component {
                                 buttonStyle={{
                                     backgroundColor: "#20b2aa",
                                     ...buttonStyle
-                                  }} />
+                                  }} 
+                                  onPress={this.props.handleToggleComplete}
+                                  />
                             
                             </View>
                         </View>
@@ -93,7 +101,7 @@ export class TaskItem extends React.Component {
                             this.setModalVisible(true);
                         }}>
                         <View>
-                        <Text style={styles.textStyling}>Lets finish the wireless application assignment.</Text>
+                        <Text style={styles.textStyling}>{this.props.title}</Text>
                         </View>
                     </TouchableHighlight>
                     
